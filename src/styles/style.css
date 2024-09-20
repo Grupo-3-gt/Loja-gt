@@ -25,3 +25,7 @@ div{
     display: flex;
     gap: 20px;
 }
+main>img{
+    width: 100%;
+    object-fit: cover;
+}
