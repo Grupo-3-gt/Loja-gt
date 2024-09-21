@@ -7,8 +7,17 @@ header {
   padding: 0px 40px;
 }
 
-h1 > img {
-  width: 90px;
+.details-button {
+  display: none;
+}
+
+h1 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  color: var(--color-white-fixed);
+  cursor: pointer;
 }
 
 nav {
@@ -21,18 +30,198 @@ a {
   font-size: 20px;
 }
 
-div {
+a:hover {
+  color: var(--color-black-fixed);
+  transition: 0.4s;
+}
+
+header div {
   display: flex;
   gap: 20px;
 }
 
-div > button {
+header div > button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
+header div button > img:hover {
+  color: var(--color-black-fixed);
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-grey-100);
+}
+
 main > img {
   width: 100%;
   object-fit: cover;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1300px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+ul > li {
+  display: flex;
+  width: 250px;
+  flex: 1 1 30%;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: var(--color-white-fixed);
+  border-radius: 8px;
+}
+
+ul > li:hover {
+  transform: scale(1.01);
+  transition: 0.4s;
+}
+
+ul li > img {
+  background-color: red;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+
+  button {
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: var(--color-white-fixed);
+  }
+
+  button:hover{
+    background-color: var(--color-black-fixed);
+    color: var(--color-white-fixed);
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 858px) {
+  header {
+    height: 70px;
+
+    h1 {
+      font-size: 26px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    div button > img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 70px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    nav {
+      gap: 15px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    div button > img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  ul > li {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 629px) {
+  header {
+    height: 70px;
+    padding: 0 10px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    nav {
+      gap: 15px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+
+    div {
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 20px;
+
+    h1 {
+      font-size: 18px;
+    }
+
+    a {
+      display: none;
+    }
+
+    div button:nth-child(1) {
+      display: none;
+    }
+  }
+
+  .details-button {
+    display: inline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .details-button:hover {
+    color: var(--color-black-fixed);
+    transition: 0.3s;
+    transform: scale(1.2);
+  }
+
+  ul > li {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
