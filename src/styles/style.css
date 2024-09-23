@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 header {
   background-color: var(--color-grey-600);
   display: flex;
@@ -55,6 +61,7 @@ header div button > img:hover {
 main {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: center;
   background-color: var(--color-grey-100);
 }
@@ -64,7 +71,7 @@ main > img {
   object-fit: cover;
 }
 
-ul {
+.lista {
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -72,9 +79,10 @@ ul {
   padding: 0 20px;
   flex-wrap: wrap;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 
-ul > li {
+.lista > li {
   display: flex;
   width: 250px;
   flex: 1 1 30%;
@@ -84,12 +92,12 @@ ul > li {
   border-radius: 8px;
 }
 
-ul > li:hover {
+.lista > li:hover {
   transform: scale(1.01);
   transition: 0.4s;
 }
 
-ul li > img {
+.lista li > img {
   background-color: red;
   width: 100%;
   cursor: pointer;
@@ -109,10 +117,139 @@ ul li > img {
     background-color: var(--color-white-fixed);
   }
 
-  button:hover{
+  button:hover {
     background-color: var(--color-black-fixed);
     color: var(--color-white-fixed);
     transition: 0.4s;
+  }
+}
+
+footer {
+  background-color: var(--color-black-fixed);
+}
+
+.input-footer {
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 390px;
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
+.input-footer:focus {
+  outline: none;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.news-letter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red;f */
+  gap: 18px;
+  padding: 50px;
+}
+
+.news-letter h1 {
+  color: var(--color-white-fixed);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.news-letter p {
+  color: var(--color-white-fixed);
+}
+
+.news-letter form {
+  display: flex;
+  gap: 20px;
+}
+
+.news-letter form button {
+  width: 185px;
+  height: 40px;
+  font-weight: 700;
+  border: 1px solid gray;
+  color: gray;
+  background-color: white;
+  transition: 0.2ss;
+  cursor: pointer;
+}
+
+.news-letter form button:hover {
+  color: white;
+  background-color: #3a3a3a;
+}
+
+.coluna {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: start; */
+}
+
+.institucional {
+  width: 25%;
+  padding: 70px 0;
+}
+
+.institucional h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  display: flex;
+  padding: 10px 80px;
+  justify-content: space-around;
+  margin: 18px 80px;
+}
+
+.f-links {
+  border: nome;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  list-style: nome;
+}
+
+.f-links a {
+  color: var(--color-white-fixed);
+  display: block;
+  font-size: 14px;
+  font-weight: 500px;
+  line-height: 11px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.f-links a:hover {
+  color: rgb(242, 113, 134);
+}
+
+.f-links p {
+  color: var(--color-white-fixed);
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1044px) {
+  .news-letter form {
+    flex-direction: column;
   }
 }
 
@@ -131,6 +268,15 @@ ul li > img {
     div button > img {
       width: 20px;
       height: 20px;
+    }
+  }
+  footer {
+    .input-footer {
+      width: 250px;
+    }
+    .news-letter form button {
+      width: 150px;
+      height: 30px;
     }
   }
 }
@@ -157,9 +303,13 @@ ul li > img {
     }
   }
 
-  ul > li {
+  .lista > li {
     flex: 1 1 45%;
     max-width: 45%;
+  }
+
+  .footer-links {
+    margin: 15px 20px;
   }
 }
 
@@ -220,8 +370,21 @@ ul li > img {
     transform: scale(1.2);
   }
 
-  ul > li {
+  .lista > li {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .footer-links {
+    padding: 0;
+    margin: 15px 20px;
+  }
+
+  .f-links a {
+    font-size: 10px;
+  }
+
+  .f-links p {
+    font-size: 14;
   }
 }
