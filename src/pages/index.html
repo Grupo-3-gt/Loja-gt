@@ -9,18 +9,27 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../asserts/img/rosa.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../styles/globalStyles.css" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <title>Document</title>
+    <title>Morena Rosa</title>
   </head>
   <body>
     <header>
-      <h1>
-        <img
-          src="../asserts/img/WhatsApp Image 2024-09-20 at 10.09.51 (1).jpeg"
-          alt=""
-        />
-      </h1>
+      <button class="details-button">
+        <img src="../asserts/img/icons8-bulleted-list-50.png" alt="" />
+      </button>
+      <h1>Morena Rosa</h1>
       <nav>
         <a href="">Feminino</a>
         <a href="">Infantil</a>
@@ -41,15 +50,152 @@
     </header>
     <main>
       <img src="../asserts/img/lancamento.gif" />
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ul class="lista">
+        <li>
+          <img
+            src="../asserts/img/roupas/OFF-WHITE-01_e26ec7c9-46ed-4cc2-9fb0-346bd27fe5a9.webp"
+            alt=""
+          />
+          <div class="card-div">
+            <h2>Wingsuit</h2>
+            <span>R$ 329,90</span>
+            <button>Adicionar à sacola</button>
+          </div>
+        </li>
+        <li>
+          <img src="../asserts/img/roupas/PRETO-03_11.webp" alt="" />
+          <div class="card-div">
+            <h2>Vestido Wingsuit</h2>
+            <span>R$ 499,90</span>
+            <button>Adicionar à sacola</button>
+          </div>
+        </li>
+        <li>
+          <img src="../asserts/img/roupas/antisuor16440.webp" alt="" />
+          <div class="card-div">
+            <h2>Sutiâ Comfy</h2>
+            <span>R$ 139,90</span>
+            <button>Adicionar à sacola</button>
+          </div>
+        </li>
+        <li>
+          <img
+            src="../asserts/img/roupas/1_2e40b687-00dc-4dfa-9c06-efa7591c8096.webp"
+            alt=""
+          />
+          <div class="card-div">
+            <h2>Saia Mini kyoto</h2>
+            <span>R$ 329,90</span>
+            <button>Adicionar à sacola</button>
+          </div>
+        </li>
+        <li>
+          <img src="../asserts/img/roupas/Shorts_UrBrown_01_2.webp" alt="" />
+          <div class="card-div">
+            <h2>Shorts Kyoto Feminino</h2>
+            <span>R$ 299,90</span>
+            <button>Adicionar à sacola</button>
+          </div>
+        </li>
+        <li>
+          <img
+            src="../asserts/img/roupas/SpectrumSocks2.0FemininoMidNewBlueC2.webp"
+            alt=""
+          />
+          <div class="card-div">
+            <h2>Spectrum Socks Mid 2.0</h2>
+            <span>R$ 45,90</span>
+            <button>Adicionar à sacola</button>
+          </div>
+        </li>
       </ul>
     </main>
+    <footer>
+      <div class="news-letter">
+        <h1>NEWS LETTER</h1>
+        <p>
+          Cadastre-se para receber as novidades e ganhe 15% na primeira compra!
+        </p>
+        <form action="#">
+          <input
+            class="input-footer"
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Nome"
+          />
+          <input
+            class="input-footer"
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Email"
+          />
+          <button id="button" type="submit">Cadastre-se</button>
+        </form>
+      </div>
+      <div class="social-media">
+        <a target="_blank" href="#"
+          ><img
+            width="25"
+            src="../asserts/img/social.png"
+            alt="Acessar o Facebook"
+        /></a>
+        <a target="_blank" href="#"
+          ><img
+            width="25"
+            src="../asserts/img/instagram.png"
+            alt="Acessar o Instagram"
+        /></a>
+        <a target="_blank" href="#"
+          ><img
+            width="28"
+            src="../asserts/img/tiktok.png"
+            alt="Acessar o Tik Tok"
+        /></a>
+        <a target="_blank" href="#"
+          ><img
+            width="25"
+            src="../asserts/img/pinterest.png"
+            alt="Acessar o Pinterest"
+        /></a>
+        <a target="_blank" href="#"
+          ><img
+            width="27"
+            src="../asserts/img/youtube.png"
+            alt="Acessar o Youtube"
+        /></a>
+        <a target="_blank" href="#"
+          ><img
+            width="25"
+            src="../asserts/img/spotify.png"
+            alt="Acessar o Spotify"
+        /></a>
+      </div>
+      <div class="footer-links">
+        <ul class="f-links">
+          <p>Institucional:</p>
+          <li><a href="">Nossa História</a></li>
+          <li><a href="">Nossas Lojas</a></li>
+          <li><a href="">Política de Privacidade</a></li>
+          <li><a href="">Instituto Morena Rosa</a></li>
+          <li><a href="">Grupo Morena Rosa</a></li>
+          <li><a href="">Seja um Franqueado</a></li>
+          <li><a href="">Seja um Revendedor</a></li>
+        </ul>
+        <ul class="f-links">
+          <p>Informações Úteis:</p>
+          <li><a href="">Política de Entrega e Retirada em Lojas</a></li>
+          <li><a href="">Trocas e Devoluções</a></li>
+          <li><a href="">Troque Fácil</a></li>
+          <li><a href="">Cashback</a></li>
+          <li><a href="">Baixe o APP</a></li>
+          <li><a href="">Regulamento e Promoções</a></li>
+          <li><a href="">Reclame Aqui</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

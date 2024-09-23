@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 header {
   background-color: var(--color-grey-600);
   display: flex;
@@ -7,8 +13,17 @@ header {
   padding: 0px 40px;
 }
 
-h1 > img {
-  width: 90px;
+.details-button {
+  display: none;
+}
+
+h1 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  color: var(--color-white-fixed);
+  cursor: pointer;
 }
 
 nav {
@@ -21,24 +36,355 @@ a {
   font-size: 20px;
 }
 
-div {
+a:hover {
+  color: var(--color-black-fixed);
+  transition: 0.4s;
+}
+
+header div {
   display: flex;
   gap: 20px;
 }
 
-div > button {
+header div > button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
+header div button > img:hover {
+  color: var(--color-black-fixed);
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
 main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
   background-color: var(--color-grey-100);
-  height: 100vh;
 }
 
 main > img {
   width: 100%;
-  height: 800px;
   object-fit: cover;
+}
+
+.lista {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1300px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.lista > li {
+  display: flex;
+  width: 250px;
+  flex: 1 1 30%;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: var(--color-white-fixed);
+  border-radius: 8px;
+}
+
+.lista > li:hover {
+  transform: scale(1.01);
+  transition: 0.4s;
+}
+
+.lista li > img {
+  background-color: red;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+
+  button {
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: var(--color-white-fixed);
+  }
+
+  button:hover {
+    background-color: var(--color-black-fixed);
+    color: var(--color-white-fixed);
+    transition: 0.4s;
+  }
+}
+
+footer {
+  background-color: var(--color-black-fixed);
+}
+
+.input-footer {
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 390px;
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
+.input-footer:focus {
+  outline: none;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.news-letter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red;f */
+  gap: 18px;
+  padding: 50px;
+}
+
+.news-letter h1 {
+  color: var(--color-white-fixed);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.news-letter p {
+  color: var(--color-white-fixed);
+}
+
+.news-letter form {
+  display: flex;
+  gap: 20px;
+}
+
+.news-letter form button {
+  width: 185px;
+  height: 40px;
+  font-weight: 700;
+  border: 1px solid gray;
+  color: gray;
+  background-color: white;
+  transition: 0.2ss;
+  cursor: pointer;
+}
+
+.news-letter form button:hover {
+  color: white;
+  background-color: #3a3a3a;
+}
+
+.coluna {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: start; */
+}
+
+.institucional {
+  width: 25%;
+  padding: 70px 0;
+}
+
+.institucional h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  display: flex;
+  padding: 10px 80px;
+  justify-content: space-around;
+  margin: 18px 80px;
+}
+
+.f-links {
+  border: nome;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  list-style: nome;
+}
+
+.f-links a {
+  color: var(--color-white-fixed);
+  display: block;
+  font-size: 14px;
+  font-weight: 500px;
+  line-height: 11px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.f-links a:hover {
+  color: rgb(242, 113, 134);
+}
+
+.f-links p {
+  color: var(--color-white-fixed);
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1044px) {
+  .news-letter form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 858px) {
+  header {
+    height: 70px;
+
+    h1 {
+      font-size: 26px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    div button > img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  footer {
+    .input-footer {
+      width: 250px;
+    }
+    .news-letter form button {
+      width: 150px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 70px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    nav {
+      gap: 15px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    div button > img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .lista > li {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .footer-links {
+    margin: 15px 20px;
+  }
+}
+
+@media (max-width: 629px) {
+  header {
+    height: 70px;
+    padding: 0 10px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    nav {
+      gap: 15px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+
+    div {
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 20px;
+
+    h1 {
+      font-size: 18px;
+    }
+
+    a {
+      display: none;
+    }
+
+    div button:nth-child(1) {
+      display: none;
+    }
+  }
+
+  .details-button {
+    display: inline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .details-button:hover {
+    color: var(--color-black-fixed);
+    transition: 0.3s;
+    transform: scale(1.2);
+  }
+
+  .lista > li {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-links {
+    padding: 0;
+    margin: 15px 20px;
+  }
+
+  .f-links a {
+    font-size: 10px;
+  }
+
+  .f-links p {
+    font-size: 14;
+  }
 }
