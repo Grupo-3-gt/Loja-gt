@@ -132,6 +132,7 @@ footer {
   border: none;
   border-bottom: 1px solid gray;
   width: 390px;
+  color: var(--color-white-fixed);
   background-color: transparent;
   padding-bottom: 10px;
 }
